@@ -1,0 +1,43 @@
+
+#type: args
+pretrain:
+  epochs: 100
+  batch_size: 16
+  lr: 1.0e-3
+  
+train:
+  epochs: 500
+  batch_size: 8
+  lr: 0.0005
+                  
+diffusion:
+  layers: 4  
+  channels: 16
+  nheads: 2 
+  diffusion_embedding_dim: 128
+  beta_start: 0.0001
+  beta_end: 0.5
+  num_steps: 10
+  schedule: "quad"
+  mixed: False
+  num_cond_masks: 10
+model:
+  timeemb: 32
+  featureemb: 274
+  target_strategy: "random"
+  mixed: False
+
+embedding:
+  timeemb: 128                        ## Time embedding dimension, needed as parameter for the embedding block, same as the one model
+  featureemb: 115  
+  mts_emb_dim: 16                    ## Feature embedding dimension, needed as parameter for the embedding block, same as the one model
+  num_feat: 35                        ## Total number of features in the MTS (K)
+  num_timestamps: 48                  ## Total number of timestamps in the MTS (L)
+  classes: 1
+  channels: 16                        ## Number of embedding dimension in both temporal and spatial encoders
+  nheads: 8                           ## Number of heads in the temporal and spatial encoders
+  diffusion_embedding_dim: 128        ## Diffusion step embedding dimension
+  num_steps: 10                    ## Total number of diffusion steps
+  
+finetuning:
+  epochs: 200                      ## Number of finetuning epochs for the downstream task

@@ -1,0 +1,30 @@
+{
+    "dataset_name": "botnet",
+    "net_name": "mlp",
+    "optimizer_name": "adam",
+    "lr": 0.0001,
+    "epochs0": 300,
+    "epochs": 50,
+    "input_dim": 115,
+    "batch_size": 200,
+    "load_arguments": null,
+    "latent_dimension": 32,
+    "log_dir": "botnet",
+    "repeat": 1,
+    "rsd": null,
+    "seed": null,
+    "stop_threshold": 1e-4,
+    "entropy_reg_coe": 0.01,
+    "mu": null,
+    "std": 1.0,
+    "missing_rate": null,
+    "_lambda": 1.0,
+    "beta": 1.0,
+    "alpha": 1.0,
+    "split": 2,
+    "mechanism": null,
+    "num_cond_masks": 10
+}
+
+
+
